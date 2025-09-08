@@ -1,0 +1,1759 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enchanted Cake Paradise Login</title>
+  <link rel="stylesheet" href="java.js">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;500;700&family=Chewy&display=swap" rel="stylesheet">
+  <style>
+    /* ======================== */
+    /* Cosmic Style System */
+    /* ======================== */
+    :root {
+      --galaxy-purple: #6c5ce7;
+      --strawberry-red: #ff6b6b;
+      --sunshine-yellow: #ffd93d;
+      --cream-frosting: #fff5e6;
+      --chocolate-drip: #4b2c20;
+      --sprinkle-blue: #48dbfb;
+      --neon-pink: #ff00ff;
+      --deep-space: #2d3436;
+      --cosmic-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, 
+        var(--galaxy-purple) 0%, 
+        var(--deep-space) 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ======================== */
+    /* Celestial Cake Creation */
+    /* ======================== */
+    .cake-universe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 600px;
+      perspective: 2000px;
+      filter: drop-shadow(0 0 50px rgba(255,215,0,0.5));
+      z-index: 1;
+    }
+
+    .cake-tower {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: cosmicFloat 6s ease-in-out infinite;
+    }
+
+    .cake-tier {
+      position: absolute;
+      width: 80%;
+      height: 25%;
+      background: linear-gradient(
+        15deg,
+        var(--chocolate-drip) 20%,
+        #6b4226 80%
+      );
+      border-radius: 20px 20px 50px 50px;
+      box-shadow: 
+        inset 0 -15px 30px rgba(0,0,0,0.3),
+        inset 0 15px 30px rgba(255,255,255,0.1);
+      transform-origin: bottom;
+    }
+
+    .tier-1 { bottom: 0; z-index: 3; width: 100%; left: 0; }
+    .tier-2 { bottom: 25%; z-index: 2; width: 90%; left: 5%; }
+    .tier-3 { bottom: 50%; z-index: 1; width: 80%; left: 10%; }
+
+    .magic-frosting {
+      position: absolute;
+      width: 110%;
+      height: 30px;
+      background: linear-gradient(
+        45deg,
+        var(--cream-frosting) 30%,
+        #ffe8d1 70%
+      );
+      border-radius: 50px;
+      left: -5%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      z-index: 4;
+    }
+
+    .frosting-top { top: -15px; }
+    .frosting-mid { top: 25%; }
+    .frosting-bottom { top: 50%; }
+
+    .enchanted-drip {
+      position: absolute;
+      width: 40px;
+      height: 80px;
+      background: var(--strawberry-red);
+      border-radius: 0 0 30px 30px;
+      animation: magicDrip 4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      filter: drop-shadow(0 10px 20px rgba(255,107,107,0.5));
+    }
+
+    .drip-1 { left: 15%; top: 28%; }
+    .drip-2 { left: 35%; top: 32%; }
+    .drip-3 { right: 25%; top: 30%; }
+    .drip-4 { right: 10%; top: 27%; }
+
+    .sparkle-candle {
+      position: absolute;
+      width: 25px;
+      height: 120px;
+      background: linear-gradient(
+        to right,
+        #ff9ff3 0%,
+        #f368e0 50%,
+        #ff6b6b 100%
+      );
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 0 30px rgba(255,155,243,0.5);
+      z-index: 5;
+    }
+
+    .eternal-flame {
+      position: absolute;
+      width: 20px;
+      height: 40px;
+      background: linear-gradient(#ffd93d, #ff6b6b 70%);
+      border-radius: 50% 50% 35% 35%;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: cosmicFlame 0.5s infinite alternate;
+      filter: blur(5px);
+    }
+
+    .galaxy-cherry {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at 30% 30%, 
+        var(--neon-pink) 20%,
+        var(--strawberry-red) 80%);
+      border-radius: 50%;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 50px rgba(255,0,255,0.5);
+      animation: nebulaSpin 8s linear infinite;
+    }
+
+    .cherry-stem {
+      position: absolute;
+      width: 8px;
+      height: 40px;
+      background: #2ecc71;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      border-radius: 5px;
+      animation: stemSway 2s infinite alternate;
+    }
+
+    /* ======================== */
+    /* Interstellar Login Form */
+    /* ======================== */
+    .stargate-portal {
+      position: relative;
+      width: 500px;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px) saturate(200%);
+      border-radius: 30px;
+      box-shadow: var(--cosmic-shadow);
+      z-index: 10;
+      border: 3px solid rgba(255,255,255,0.3);
+      transform-style: preserve-3d;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+    }
+
+    .stargate-portal::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 20%,
+        rgba(255,255,255,0.1) 50%,
+        transparent 80%
+      );
+      animation: portalGlow 6s infinite linear;
+    }
+
+    .portal-header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .portal-title {
+      font-family: 'Chewy', cursive;
+      font-size: 3.5rem;
+      background: linear-gradient(45deg, 
+        var(--sunshine-yellow) 20%,
+        var(--neon-pink) 50%,
+        var(--sprinkle-blue) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(255,255,255,0.5);
+      transform: rotate(-2deg);
+      margin-bottom: 20px;
+    }
+
+    .stardust-input {
+      position: relative;
+      margin: 35px 0;
+    }
+
+    .cosmic-input {
+      width: 100%;
+      padding: 20px 30px;
+      border: 2px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .cosmic-input:focus {
+      outline: none;
+      border-color: var(--sprinkle-blue);
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 0 40px rgba(72,219,251,0.3);
+    }
+
+    .quantum-button {
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(135deg, 
+        var(--neon-pink) 0%,
+        var(--galaxy-purple) 100%);
+      border: none;
+      border-radius: 15px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .quantum-button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 20%,
+        rgba(255,255,255,0.3) 50%,
+        transparent 80%
+      );
+      animation: buttonEnergy 3s infinite linear;
+    }
+
+    .quantum-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 50px rgba(108,92,231,0.5);
+    }
+
+    /* ======================== */
+    /* Animated Cosmic Effects */
+    /* ======================== */
+    .space-particles {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star-particle {
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      border-radius: 50%;
+      animation: starTwinkle 3s infinite;
+    }
+
+    .nebula-cloud {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, 
+        rgba(255,107,107,0.3) 0%,
+        transparent 70%);
+      animation: nebulaPulse 8s infinite;
+    }
+
+    .comet-trail {
+      position: absolute;
+      width: 150px;
+      height: 3px;
+      background: linear-gradient(90deg, 
+        transparent 0%,
+        var(--sprinkle-blue) 50%,
+        transparent 100%);
+      animation: cometFly 4s infinite linear;
+    }
+
+    /* ======================== */
+    /* Cosmic Keyframe Animations */
+    /* ======================== */
+    @keyframes cosmicFloat {
+      0%, 100% { transform: translateY(0) rotateX(0deg); }
+      50% { transform: translateY(-30px) rotateX(10deg); }
+    }
+
+    @keyframes magicDrip {
+      0%, 100% { transform: translateY(0) scaleY(1); }
+      50% { transform: translateY(30px) scaleY(1.2); }
+    }
+
+    @keyframes cosmicFlame {
+      0% { 
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+      }
+      100% { 
+        transform: translateX(-50%) scale(1.2) translateX(10px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes nebulaSpin {
+      0% { transform: translateX(-50%) rotate(0deg); filter: hue-rotate(0deg); }
+      100% { transform: translateX(-50%) rotate(720deg); filter: hue-rotate(360deg); }
+    }
+
+    @keyframes portalGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes buttonEnergy {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes cometFly {
+      0% { transform: translateX(-100vw) translateY(-50vh); }
+      100% { transform: translateX(100vw) translateY(100vh); }
+    }
+
+    /* ======================== */
+    /* Interactive Galaxy Effects */
+    /* ======================== */
+    .gravity-well {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: gravityPulse 8s infinite linear;
+      mix-blend-mode: overlay;
+    }
+
+    .blackhole-core {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(circle, 
+        var(--deep-space) 30%,
+        transparent 70%);
+      border-radius: 50%;
+      animation: singularitySpin 10s infinite linear;
+    }
+
+    @keyframes gravityPulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 0.3; }
+    }
+
+    @keyframes singularitySpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ======================== */
+    /* Responsive Stardust */
+    /* ======================== */
+    @media (max-width: 768px) {
+      .cake-universe {
+        width: 95%;
+        height: 400px;
+      }
+
+      .stargate-portal {
+        width: 90%;
+        padding: 30px;
+      }
+
+      .portal-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* ======================== */
+    /* Utility Classes */
+    /* ======================== */
+    .cosmic-glow {
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.5));
+    }
+
+    .anti-gravity {
+      animation: antiGravity 3s ease-in-out infinite;
+    }
+
+    @keyframes antiGravity {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="gravity-well"></div>
+
+  <div class="cake-universe">
+    <div class="cake-tower">
+      <div class="cake-tier tier-1"></div>
+      <div class="cake-tier tier-2"></div>
+      <div class="cake-tier tier-3"></div>
+      <div class="magic-frosting frosting-top"></div>
+      <div class="magic-frosting frosting-mid"></div>
+      <div class="magic-frosting frosting-bottom"></div>
+      <div class="enchanted-drip drip-1"></div>
+      <div class="enchanted-drip drip-2"></div>
+      <div class="enchanted-drip drip-3"></div>
+      <div class="enchanted-drip drip-4"></div>
+      <div class="sparkle-candle">
+        <div class="eternal-flame"></div>
+      </div>
+      <div class="galaxy-cherry"></div>
+      <div class="cherry-stem"></div>
+    </div>
+  </div>
+
+  <form class="stargate-portal">
+    <div class="portal-header">
+      <h1 class="portal-title">Please enter your name!</h1>
+    </div>
+    <div class="stardust-input">
+      <input type="text" class="cosmic-input" placeholder="Your Name">
+    </div>
+    <div class="stardust-input">
+      <input type="password" class="cosmic-input" placeholder="Password">
+    </div>
+    <button type="submit" class="quantum-button">Login</button>
+  </form>
+
+  <script>
+    // Cosmic Interaction System
+    document.addEventListener('DOMContentLoaded', () => {
+      // Generate Starfield
+      function createStarfield() {
+        const container = document.body;
+        for(let i = 0; i < 200; i++) {
+          const star = document.createElement('div');
+          star.className = 'space-particles star-particle';
+          star.style.left = Math.random() * 100 + 'vw';
+          star.style.top = Math.random() * 100 + 'vh';
+          star.style.animationDelay = Math.random() * 3 + 's';
+          container.appendChild(star);
+        }
+        // Add nebula clouds
+        for(let i = 0; i < 5; i++) {
+          const nebula = document.createElement('div');
+          nebula.className = 'space-particles nebula-cloud';
+          nebula.style.left = Math.random() * 100 + 'vw';
+          nebula.style.top = Math.random() * 100 + 'vh';
+          nebula.style.width = Math.random() * 100 + 50 + 'px';
+          nebula.style.height = nebula.style.width;
+          container.appendChild(nebula);
+        }
+        // Add comet trails
+        for(let i = 0; i < 3; i++) {
+          const comet = document.createElement('div');
+          comet.className = 'space-particles comet-trail';
+          comet.style.left = Math.random() * 100 + 'vw';
+          comet.style.top = Math.random() * 100 + 'vh';
+          comet.style.animationDelay = Math.random() * 4 + 's';
+          container.appendChild(comet);
+        }
+      }
+      createStarfield();
+
+      // Gravity Well Animation
+      const gravityWells = document.createElement('div');
+      gravityWells.className = 'gravity-well';
+      document.body.appendChild(gravityWells);
+
+      // Cake Interaction
+      const cake = document.querySelector('.cake-tower');
+      const candleFlame = document.querySelector('.eternal-flame');
+      
+      cake.addEventListener('mouseenter', () => {
+        cake.style.animation = 'cosmicFloat 3s ease-in-out infinite';
+        candleFlame.style.transform = 'scale(1.5)';
+      });
+
+      cake.addEventListener('mouseleave', () => {
+        cake.style.animation = 'cosmicFloat 6s ease-in-out infinite';
+        candleFlame.style.transform = 'scale(1)';
+      });
+
+      // Form Interactions
+      const inputs = document.querySelectorAll('.cosmic-input');
+      inputs.forEach(input => {
+        input.addEventListener('focus', (e) => {
+          createInputParticles(e.target);
+          e.target.parentElement.style.transform = 'translateY(-10px)';
+        });
+        input.addEventListener('blur', (e) => {
+          e.target.parentElement.style.transform = 'translateY(0)';
+        });
+      });
+
+      function createInputParticles(input) {
+        const rect = input.getBoundingClientRect();
+        for(let i = 0; i < 20; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'space-particles star-particle';
+          particle.style.left = rect.left + Math.random() * rect.width + 'px';
+          particle.style.top = rect.top + Math.random() * rect.height + 'px';
+          particle.style.animation = 'starTwinkle 1s forwards';
+          document.body.appendChild(particle);
+          setTimeout(() => particle.remove(), 1000);
+        }
+      }
+
+      // Form Submission with Credential Check
+      const form = document.querySelector('.stargate-portal');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = form.querySelector('input[type="text"]').value;
+        const password = form.querySelector('input[type="password"]').value;
+
+        // Check if inputs are empty
+        if(!username || !password) {
+          form.style.animation = 'shake 0.5s';
+          setTimeout(() => form.style.animation = '', 500);
+          createInputParticles(form);
+          return;
+        }
+
+        // Check if the credentials are correct (username: "Shobhit", password: "Love")
+        if(username === "none" && password === "projectm1") {
+          // Successful login animation and redirect to main.html
+          form.style.transform = 'scale(1.2) rotate(10deg)';
+          form.style.opacity = '0';
+          setTimeout(() => {
+            window.location.href = "main.html";
+          }, 1000);
+        } else {
+          // Wrong credentials
+          alert("Invalid credentials!");
+          form.style.animation = 'shake 0.5s';
+          setTimeout(() => form.style.animation = '', 500);
+        }
+      });
+
+      // Parallax Effect
+      document.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.pageX) / 30;
+        const y = (window.innerHeight / 2 - e.pageY) / 30;
+        document.querySelector('.cake-universe').style.transform = 
+          `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        document.querySelector('.stargate-portal').style.transform = 
+          `translate(${-x/2}px, ${-y/2}px)`;
+      });
+
+      // Add shake animation for form validation
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-20px); }
+          50% { transform: translateX(20px); }
+          75% { transform: translateX(-10px); }
+        }
+      `;
+      document.head.appendChild(style);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minhaz & Sinha's - Eternal Love</title>
+  <script src="https://kit.fontawesome.com/a14ae32021.js"></script>
+  <link rel="stylesheet" href="java.js">
+  <style>
+    /* Reset & Full-Viewport Setup */
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* Animated Gradient Background & Heart Cursor */
+    body {
+      background: linear-gradient(45deg, #1a1a1a, #4a148c, #880e4f, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath fill='%23ff4081' d='M471.701 73.005c-54.5-46.4-136.6-38.9-186.7 13.5L256 119.3l-29.031-32.76c-50.105-52.4-132.208-59.9-186.7-13.5-62.1 52.9-66.7 149.8-9.9 207.1l193.5 199.4c12 12.4 28 19.6 44.4 19.6s32.4-7.2 44.4-19.6l193.5-199.4c56.8-57.3 52.2-154.2-9.9-207.1z'/%3E%3C/svg%3E") 26 26, auto;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Floating Stars (Background) */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+    }
+    .star {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      animation: twinkle var(--duration) ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    
+    /* Desktop Layout Container */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+    
+    /* Love Letter (Left Panel) */
+    .love-letter {
+      padding: 1rem;
+      color: #ffffff;
+      border-right: 2px solid #ff4081;
+      overflow-y: auto;
+      order: 1;
+    }
+    
+    /* Pink-Bordered Paragraphs */
+    .typing-border {
+      border-left: 3px solid #ff4081;
+      padding-left: 0.75rem;
+      margin: 0.4rem 0;
+      white-space: pre-wrap;
+      font-size: 0.85rem;
+      line-height: 1.2;
+      position: relative;
+    }
+    
+    /* Blinking Cursor */
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: #ff4081;
+      vertical-align: bottom;
+      animation: blink 0.75s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    /* Heart Container (Right Panel) */
+    .heart-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      order: 2;
+    }
+    .magic-heart {
+      width: 250px;
+      height: 250px;
+      animation: heartbeat 1.2s infinite;
+      position: relative;
+      margin: 0 auto;
+    }
+    .heart {
+      position: absolute;
+      fill: #ff4081;
+      filter: drop-shadow(0 0 20px #ff4081);
+    }
+    .particle {
+      position: absolute;
+      pointer-events: none;
+      animation: particle-float 3s ease-out infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.3); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+    }
+    @keyframes particle-float {
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(360deg);
+      }
+    }
+    
+    /* "I LOVE YOU" Message */
+    .love-message {
+      color: #ff4081;
+      font-size: 3rem;
+      text-align: center;
+      text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+      animation: glow 2s infinite alternate;
+      margin-top: 1rem;
+    }
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff4081, 0 0 40px #ff4081;
+      }
+    }
+    
+    /* Floating Hearts in Love Letter */
+    .floating-heart {
+      position: absolute;
+      bottom: -50px;
+      font-size: 24px;
+      color: #ff4081;
+      animation: floatUp 5s linear forwards;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-200px); opacity: 0; }
+    }
+    
+    /* Time Counter */
+    .time-counter {
+      margin-top: 1rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ff4081;
+      text-align: center;
+    }
+    .digit {
+      font-size: 1.8rem;
+      margin: 0 0.2rem;
+      display: inline-block;
+      min-width: 40px;
+    }
+    
+    /* Credit Section */
+    .credit {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+    .credit a {
+      color: #ff4081;
+      text-decoration: none;
+    }
+    
+    /* Birthday Message and Next Button */
+    .birthday-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .birthday-message {
+      color: #ff4081;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+      animation: glow 2s infinite alternate;
+    }
+    .next-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff4081;
+      transition: transform 0.2s;
+    }
+    .next-button:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Responsive for Mobile: Vertical Slider Layout */
+    @media (max-width: 768px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+      }
+      .love-letter, .heart-container {
+        scroll-snap-align: start;
+        width: 100%;
+        min-height: 100vh;
+      }
+      .love-letter {
+        border-right: none;
+        border-bottom: 2px solid #ff4081;
+        padding: 1rem;
+        overflow-y: auto;
+      }
+      .heart-container {
+        overflow: visible; /* Ensure the heart shows */
+        padding: 1rem;
+      }
+      .magic-heart {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+      }
+      .love-message {
+        font-size: 2.8rem;
+      }
+      .typing-border {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+      }
+      .digit {
+        font-size: 1.8rem;
+        min-width: 40px;
+      }
+      .birthday-message {
+        font-size: 2.8rem;
+      }
+      .next-button {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Stars -->
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <!-- Love Letter (Text Section) -->
+    <div class="love-letter">
+      <div id="paragraphs-container"><!-- Filled by JS --></div>
+    </div>
+    
+    <!-- Heart Section -->
+    <div class="heart-container">
+      <div class="magic-heart">
+        <svg class="heart" viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+            c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+        </svg>
+      </div>
+      <div class="love-message">I LOVE YOU</div>
+      <div class="time-counter">
+        <div id="days" class="digit">000</div> Days
+        <div id="hours" class="digit">00</div> Hours
+        <div id="minutes" class="digit">00</div> Minutes
+        <div id="seconds" class="digit">00</div> Seconds
+      </div>
+    </div>
+  </div>
+  
+  <!-- Credits -->
+  <div class="credit">
+    Created by Minhaz | <a href="https://www.instagram.com/minhajislam09/?hl=en" target="_blank">Instagram</a>
+  </div>
+  
+  <script>
+    // 1) Create Floating Stars
+    function createStars() {
+      const container = document.getElementById('stars');
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.width = star.style.height = `${Math.random() * 3}px`;
+        star.style.setProperty('--duration', `${Math.random() * 3 + 1}s`);
+        container.appendChild(star);
+      }
+    }
+    
+    // 2) Heart Particles on Mouse Move
+    function createParticles() {
+      const heart = document.querySelector('.magic-heart');
+      heart.addEventListener('mousemove', (e) => {
+        for (let i = 0; i < 5; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          particle.style.left = `${e.clientX}px`;
+          particle.style.top = `${e.clientY}px`;
+          particle.style.animation = `particle-float ${Math.random() * 2 + 1}s ease-out`;
+          particle.innerHTML = '❤️';
+          document.body.appendChild(particle);
+          setTimeout(() => particle.remove(), 3000);
+        }
+      });
+    }
+    
+    // 3) Floating Hearts in Love Letter
+    function createFloatingHearts() {
+      const loveLetter = document.querySelector('.love-letter');
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.style.left = Math.random() * 100 + '%';
+        heart.textContent = '❤️';
+        loveLetter.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+      }, 500);
+    }
+    
+    // 4) Typing Animation for Paragraphs
+    const paragraphs = [
+`/**
+* My Eternal Love Story
+**/`,
+
+`Dearest Minhaz,
+From the moment our eyes met...`,
+
+`Hey Sinha,
+
+We've known each other for quite a while now. I remember the first time I saw you👀✨.`,
+
+`It was a sunday🗿, January 10th 🗓, and it was exactly 3;47 PM 🕒.`,
+
+`So, it's been 9 months and 27days since we’ve known each other. By the way, I Known you since 10 years please click to NEXT.`,
+
+`With all my heart, Forever Yours.`
+    ];
+    
+    let pIndex = 0;
+    
+    function typeParagraph() {
+      if (pIndex < paragraphs.length) {
+        const container = document.createElement('div');
+        container.className = 'typing-border';
+        const typedTextEl = document.createElement('span');
+        const cursorEl = document.createElement('span');
+        cursorEl.className = 'cursor';
+        container.appendChild(typedTextEl);
+        container.appendChild(cursorEl);
+        document.getElementById('paragraphs-container').appendChild(container);
+        typeLetter(paragraphs[pIndex], typedTextEl, cursorEl, 0, () => {
+          pIndex++;
+          setTimeout(typeParagraph, 600);
+        });
+      } else {
+        displayBirthdayMessage();
+      }
+    }
+    
+    function typeLetter(text, typedTextEl, cursorEl, i, callback) {
+      if (i < text.length) {
+        typedTextEl.innerHTML += text[i];
+        i++;
+        setTimeout(() => typeLetter(text, typedTextEl, cursorEl, i, callback), 40);
+      } else {
+        cursorEl.style.display = 'none';
+        callback();
+      }
+    }
+    
+    // 5) Display Birthday Message and Next Button (redirect to cake.html)
+    function displayBirthdayMessage() {
+      const container = document.getElementById('paragraphs-container');
+      const birthdayDiv = document.createElement('div');
+      birthdayDiv.className = 'birthday-container';
+      const birthdayText = document.createElement('div');
+      birthdayText.className = 'birthday-message';
+      birthdayText.textContent = 'I love you sinha';
+      const nextButton = document.createElement('button');
+      nextButton.className = 'next-button';
+      nextButton.textContent = 'Next';
+      nextButton.addEventListener('click', () => {
+        window.location.href = 'cake.html';
+      });
+      birthdayDiv.appendChild(birthdayText);
+      birthdayDiv.appendChild(nextButton);
+      container.appendChild(birthdayDiv);
+    }
+    
+    // 6) Time Counter
+    const startDate = new Date('2024-06-10T20:16:00');
+    function updateTime() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('days').textContent = String(days).padStart(3, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      createStars();
+      createParticles();
+      createFloatingHearts();
+      setTimeout(typeParagraph, 1000);
+      setInterval(updateTime, 1000);
+      updateTime();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Extravaganza!</title>
+  <link rel="stylesheet" href="java.js">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700&family=Roboto:wght@400&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <style>
+    /* ===== CSS Variables for Theme ===== */
+    :root {
+  --primary-color: #ff4b2b;
+  --secondary-color: #ff416c;
+  --accent-color: #ff8c00;
+  --bg-light: #ffc371;
+  --text-color: #f70073;
+}
+
+
+    /* ===== CSS Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--secondary-color), var(--bg-light));
+      overflow: hidden;
+    }
+
+    /* ===== Main Container ===== */
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: url('background.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== Main Box ===== */
+    .boxcontainer {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      height: 600px;
+      background: radial-gradient(circle at center, var(--primary-color), var(--secondary-color));
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      animation: fadeInBox 2s ease forwards;
+    }
+    @keyframes fadeInBox {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* ===== Flag Image ===== */
+    .image {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: slideDown 1.5s ease forwards;
+      opacity: 0;
+    }
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    .image img {
+      width: 200px;
+    }
+
+    /* ===== Happy Birthday Text ===== */
+    .text-happybirthday {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounceText 2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes bounceText {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(20px);
+      }
+      80% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    .text-happybirthday img {
+      width: 300px;
+    }
+
+    /* ===== Cake Section ===== */
+    .cake {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: riseUp 2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes riseUp {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    .cake img {
+      width: 350px;
+      transition: transform 0.3s ease;
+    }
+    .cake img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* ===== Balloons Animation ===== */
+    .box-balloon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .balloon {
+      position: absolute;
+      width: 80px;
+      animation: floatBalloon 6s ease-in-out infinite;
+      opacity: 0;
+    }
+    @keyframes floatBalloon {
+      0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+      }
+      20% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-50px) scale(1.1);
+      }
+      80% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+      }
+    }
+    /* Positioning balloons with staggered delays */
+    .balloon:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+    }
+    .balloon:nth-child(2) {
+      left: 30%;
+      animation-delay: 1s;
+    }
+    .balloon:nth-child(3) {
+      left: 50%;
+      animation-delay: 2s;
+    }
+    .balloon:nth-child(4) {
+      left: 70%;
+      animation-delay: 1.5s;
+    }
+    .balloon:nth-child(5) {
+      left: 85%;
+      animation-delay: 0.5s;
+    }
+
+    /* ===== Clouds ===== */
+    .box-cloud {
+      position: absolute;
+      top: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .cloud {
+      position: relative;
+      width: 120px;
+      opacity: 0.9;
+      animation: driftCloud 20s linear infinite;
+    }
+    @keyframes driftCloud {
+      0% {
+        transform: translateX(-150px);
+      }
+      100% {
+        transform: translateX(100vw);
+      }
+    }
+    .cloud img {
+      width: 100%;
+    }
+
+    /* ===== Fireworks ===== */
+    .box-firework {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .firework {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      animation: burst 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes burst {
+      0% {
+        opacity: 1;
+        transform: scale(0.1);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+    }
+    /* Random fireworks positions and delays */
+    .firework:nth-child(1) {
+      top: 20%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+    .firework:nth-child(2) {
+      top: 10%;
+      left: 60%;
+      animation-delay: 4.5s;
+    }
+    .firework:nth-child(3) {
+      top: 50%;
+      left: 30%;
+      animation-delay: 5s;
+    }
+    .firework:nth-child(4) {
+      top: 40%;
+      left: 80%;
+      animation-delay: 5.5s;
+    }
+
+    /* ===== Paper Cannons ===== */
+    .paperCannons {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: cannonZoom 1.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes cannonZoom {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+    }
+    .paperCannons img {
+      width: 400px;
+    }
+
+    /* ===== Gift Boxes ===== */
+    .box-giftbox {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 300px;
+      justify-content: center;
+      opacity: 0;
+      animation: appearGift 2s ease-out forwards;
+      animation-delay: 6s;
+    }
+    @keyframes appearGift {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .box-giftbox img {
+      width: 50px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .box-giftbox img:hover {
+      transform: rotate(10deg) scale(1.2);
+    }
+
+    /* ===== Envelope / Mail Icon ===== */
+    .mail {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      width: 80px;
+      height: 80px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      animation: popUp 1s ease-out forwards;
+      opacity: 0;
+      animation-delay: 7s;
+    }
+    @keyframes popUp {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .mail .fa-envelope {
+      font-size: 36px;
+      color: var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+    .mail:hover .fa-envelope {
+      transform: rotate(15deg);
+    }
+
+    /* ===== Cute Animations ===== */
+    .boxcute {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      animation: cuteAppear 2s ease-out forwards;
+      animation-delay: 8s;
+    }
+    @keyframes cuteAppear {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .cute {
+      width: 80px;
+      transition: transform 0.3s ease;
+    }
+    .cute:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ===== Modal Mail Box ===== */
+    .boxMail {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.8);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 9999;
+    }
+    .boxMail.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+    .boxMail-container {
+      position: relative;
+      width: 750px;
+      height: 500px;
+      display: flex;
+      perspective: 2000px;
+    }
+    .card {
+      flex: 1;
+      border: 1px solid #ccc;
+      background: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+      transition: transform 1s ease;
+    }
+    .card1 {
+      background: linear-gradient(135deg, var(--accent-color), #ff7a90);
+      color: white;
+      transform-origin: left;
+    }
+    .card1 .userImg {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 3px solid white;
+    }
+    .card1 .userImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card1 h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .card2 {
+      background: linear-gradient(135deg, #e0e0e0, #ffffff);
+      color: var(--text-color);
+      transform-origin: right;
+    }
+    .card2 .card2-content {
+      padding: 20px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+    .card2 h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .card2 h2 {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .boxMail .fa-xmark {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ===== Sparkle & Heart Mouse Effects ===== */
+    .sparkle,
+    span.mouse-heart {
+      position: absolute;
+      pointer-events: none;
+      will-change: transform, opacity;
+      animation: fadeOut 1s linear forwards;
+    }
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    span.mouse-heart::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('heart.png') no-repeat center center/contain;
+    }
+
+    /* ===== Copy Text ===== */
+    #copy {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      color: #fff6f9;
+    }
+    #copy a {
+      text-decoration: none;
+      color: #191919d7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="boxcontainer">
+      <!-- Flag Image -->
+      <div class="image">
+        <img src="flag.png" alt="Flag" />
+      </div>
+      <!-- Happy Birthday Text -->
+      <div class="text-happybirthday">
+        <img src="texthappy.png" alt="Happy Birthday" />
+      </div>
+      <!-- Cake Section -->
+      <div class="cake">
+        <img src="cake.png" alt="Cake" />
+      </div>
+      <!-- Balloons -->
+      <div class="box-balloon">
+        <img class="balloon" src="balloon.png" alt="Balloon" />
+        <img class="balloon" src="balloon.png" alt="Balloon" />
+        <img class="balloon" src="balloon.png" alt="Balloon" />
+        <img class="balloon" src="balloon.png" alt="Balloon" />
+        <img class="balloon" src="balloon.png" alt="Balloon" />
+      </div>
+      <!-- Clouds -->
+      <div class="box-cloud">
+        <div class="cloud">
+          <img src="cloud.png" alt="Cloud" />
+        </div>
+        <div class="cloud">
+          <img src="cloud.png" alt="Cloud" />
+        </div>
+      </div>
+      <!-- Fireworks -->
+      <div class="box-firework">
+        <div class="firework">
+          <img src="firework.png" alt="Firework" />
+        </div>
+        <div class="firework">
+          <img src="firework.png" alt="Firework" />
+        </div>
+        <div class="firework">
+          <img src="firework.png" alt="Firework" />
+        </div>
+        <div class="firework">
+          <img src="firework.png" alt="Firework" />
+        </div>
+      </div>
+      <!-- Paper Cannons -->
+      <div class="paperCannons">
+        <img src="paperCannons1.png" alt="Paper Cannons" />
+      </div>
+      <!-- Gift Boxes -->
+      <div class="box-giftbox">
+        <img src="giftbox.png" alt="Gift Box" />
+        <img src="giftbox.png" alt="Gift Box" />
+        <img src="giftbox.png" alt="Gift Box" />
+        <img src="giftbox.png" alt="Gift Box" />
+        <img src="giftbox.png" alt="Gift Box" />
+        <img src="giftbox.png" alt="Gift Box" />
+      </div>
+      <!-- Envelope / Mail Icon -->
+      <div class="mail">
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+      <!-- Cute Animations -->
+      <div class="boxcute">
+        <img class="cute" src="cute.png" alt="Cute" />
+        <img class="cute" src="cute.png" alt="Cute" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mail Box Modal -->
+  <div class="boxMail" id="boxMail">
+    <div class="boxMail-container">
+      <div class="card card1">
+        <div class="userImg">
+          <img src="c:\Users\USER\Downloads\WhatsApp Image 2025-09-08 at 13.17.44_29c84b12.png" alt="User" />
+        </div>
+        <h3>I love you</h3>
+      </div>
+      <div class="card card2">
+        <div class="card2-content">
+          <h3>To You!</h3>
+          <h2>
+            Oh my goodness! Today is a very special day for a very special person.
+            Wishing you endless joy, success, and love. May Allah blessed you and your birthday be as bright as your smile!
+            please enter my life and change all negative thing.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark" id="closeModal"></i>
+  </div>
+
+  <!-- Copy / OG Creator -->
+  <div id="copy">
+    <p>OG Creator <a href="https://www.facebook.com/minhaj.islam.839132">@Minhaz</a></p>
+  </div>
+
+  <script>
+    // ===== Sparkle and Heart Effect on Mouse Move =====
+    document.addEventListener("mousemove", function (e) {
+      // Sparkle effect
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = e.clientX + "px";
+      sparkle.style.top = e.clientY + "px";
+      sparkle.style.width = "10px";
+      sparkle.style.height = "10px";
+      sparkle.style.background = "rgba(255, 255, 255, 0.8)";
+      sparkle.style.borderRadius = "50%";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+
+      // Heart effect
+      const heart = document.createElement("span");
+      heart.classList.add("mouse-heart");
+      heart.style.left = e.clientX + "px";
+      heart.style.top = e.clientY + "px";
+      heart.style.width = "20px";
+      heart.style.height = "20px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    });
+
+    // ===== Mail Icon Click to Open Modal =====
+    const mailIcon = document.querySelector(".mail");
+    const boxMail = document.getElementById("boxMail");
+    mailIcon.addEventListener("click", () => {
+      boxMail.classList.add("active");
+    });
+
+    // ===== Close Modal =====
+    const closeModal = document.getElementById("closeModal");
+    closeModal.addEventListener("click", () => {
+      boxMail.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
